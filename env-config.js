@@ -1,0 +1,5 @@
+// env-config.js
+window.ENV = {
+    SUPABASE_URL: 'https://placeholder.supabase.co',
+    SUPABASE_ANON_KEY: 'placeholder_key'
+};
