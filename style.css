@@ -199,20 +199,6 @@ nav a:hover {
   pointer-events: none;
 }
 
-/* Custom Cursor */
-.custom-cursor {
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--lime);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s, height 0.2s, background-color 0.2s;
-  mix-blend-mode: difference;
-}
-
 /* === RE OVERRIDES === */
 
 /* Hero badge for real estate context */
@@ -1111,4 +1097,13 @@ footer {
 
 @media (max-width: 768px) {
   .prop-stat-grid { grid-template-columns: 1fr; }
+}
+
+/* Text Logo */
+.text-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--lime);
+  letter-spacing: -1px;
 }
