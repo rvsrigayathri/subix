@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book a Free Property Growth Audit — Subix</title>
   <meta name="description" content="30-minute free audit of your real estate ads, landing pages, and CRM. Walk away with a custom growth plan. Start in 7 days.">
-  <link rel="canonical" href="https://realestate.subix.in/contact">
+  <link rel="canonical" href="https://realestate.subix.in/contact.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://realestate.subix.in/contact">
+  <meta property="og:url" content="https://realestate.subix.in/contact.html">
   <meta property="og:title" content="Book a Free Property Growth Audit — Subix">
   <meta property="og:description" content="30-minute free audit of your real estate ads, landing pages, and CRM. Walk away with a custom growth plan. Start in 7 days.">
   <meta property="og:image" content="https://realestate.subix.in/assets/og-image-re.png">
@@ -29,6 +29,11 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/Subix PNG.png">
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -37,7 +42,231 @@
 
   <!-- Supabase -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
 
-  
+  <!-- Navigation -->
+  <nav>
+    <a href="/" class="logo">
+      <img src="/assets/logo.png" alt="Subix" height="32">
+    </a>
+    <div class="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/case-studies.html">Results</a>
+      <a href="/leadOS.html">LeadOS CRM</a>
+      <a href="/contact.html" class="btn-nav-cta">Book Audit</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section style="padding-top: 160px; padding-bottom: 80px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+    <div class="bg-glow"></div>
+    <div class="container reveal">
+      <h1>
+        Book Your Free <span class="lime-text">Property Growth Audit</span>
+      </h1>
+      <p style="margin: 0 auto 40px auto; font-size: 1.2rem; max-width: 800px;">
+        Let's find the leaks in your current funnel and build a roadmap for qualified site visits.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content Grid -->
+  <section class="container reveal" style="padding-top: 0; padding-bottom: 80px;">
+    <div class="crm-grid" style="align-items: start;">
+      
+      <!-- Left Column: What to Expect -->
+      <div>
+        <h3 style="font-size: 1.8rem; margin-bottom: 24px;">What to Expect</h3>
+        <ul class="feature-list" style="margin-bottom: 40px;">
+          <li>
+            <i class="fa-solid fa-calendar-check" style="font-size: 24px;"></i>
+            <div>
+              <h4 style="font-size: 1.2rem; margin-bottom: 8px;">1. 30-Minute Strategy Call</h4>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">We'll audit your current ads, landing pages, and CRM gaps — completely free.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-map-location-dot" style="font-size: 24px;"></i>
+            <div>
+              <h4 style="font-size: 1.2rem; margin-bottom: 8px;">2. Custom Growth Plan</h4>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">You'll receive a tailored plan: channels, budget splits, and tools.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-rocket" style="font-size: 24px;"></i>
+            <div>
+              <h4 style="font-size: 1.2rem; margin-bottom: 8px;">3. We Start Within 7 Days</h4>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">No bloated onboarding. First campaigns live in one week.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div style="background: var(--surface-raised); padding: 24px; border-radius: 12px; border: 1px solid var(--border);">
+          <h4 style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--muted); text-transform: uppercase; margin-bottom: 16px;">Direct Contact</h4>
+          <p style="margin-bottom: 8px;"><i class="fa-brands fa-whatsapp" style="color: var(--lime); margin-right: 8px;"></i> <a href="https://wa.me/917305544532" target="_blank" style="color: var(--white); text-decoration: none;">+91 73055 44532</a></p>
+          <p style="margin-bottom: 0;"><i class="fa-solid fa-envelope" style="color: var(--lime); margin-right: 8px;"></i> <a href="mailto:hello@subix.in" style="color: var(--white); text-decoration: none;">hello@subix.in</a></p>
+        </div>
+      </div>
+
+      <!-- Right Column: Form -->
+      <div class="bento-card" style="padding: 32px;">
+        <form id="auditForm" onsubmit="submitForm(event)">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" class="form-control" required placeholder="John Doe">
+          </div>
+          
+          <div class="form-group">
+            <label for="company">Company / Project Name *</label>
+            <input type="text" id="company" class="form-control" required placeholder="Acme Developers">
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp *</label>
+            <input type="tel" id="phone" class="form-control" required placeholder="+91 98765 43210">
+          </div>
+          
+          <div class="form-group">
+            <label for="budget">Monthly Ad Budget *</label>
+            <select id="budget" class="form-control" required>
+              <option value="" disabled selected>Select Budget</option>
+              <option value="<₹50K"><₹50K</option>
+              <option value="₹50K–2L">₹50K–2L</option>
+              <option value="₹2L–10L">₹2L–10L</option>
+              <option value="₹10L+">₹10L+</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="goal">Primary Goal *</label>
+            <select id="goal" class="form-control" required>
+              <option value="" disabled selected>Select Goal</option>
+              <option value="More site visits">More site visits</option>
+              <option value="Lower CPL">Lower CPL</option>
+              <option value="CRM setup">CRM setup</option>
+              <option value="All of the above">All of the above</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message (Optional)</label>
+            <textarea id="message" class="form-control" rows="4" placeholder="Tell us about your project..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer; font-size: 1.1rem; padding: 16px;">Book My Audit</button>
+          
+          <div id="formMessage" style="margin-top: 16px; font-weight: 500; text-align: center; display: none;"></div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" style="grid-column: span 2;">
+          <img src="/assets/logo.png" alt="Subix" height="32" style="margin-bottom: 20px;">
+          <p style="font-size: 0.9rem;">Built for Real Estate Growth.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="/services.html">Performance Ads</a>
+          <a href="/services.html">WhatsApp Automation</a>
+          <a href="/services.html">Property Content</a>
+          <a href="/services.html">PR & Brand</a>
+          <a href="/services.html">AI Lead Qualification</a>
+          <a href="/leadOS.html">LeadOS CRM</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/contact.html">Contact Us</a>
+          <a href="https://subix.in" target="_blank">Main Site &nearr;</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:hello@subix.in">hello@subix.in</a>
+          <a href="tel:+917305544532">+91 73055 44532</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/privacy.html">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>Copyright &copy; 2026 Subix Real Estate. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/917305544532?text=Hi%20Subix!%20I%20want%20to%20grow%20my%20real%20estate%20brand." class="wa-float" target="_blank" rel="noopener">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="/env-config.js"></script>
+  <script src="/script.js"></script>
+  <script>
+    let supabaseClient = null;
+    if (window.supabase && window.ENV) {
+      supabaseClient = window.supabase.createClient(window.ENV.SUPABASE_URL, window.ENV.SUPABASE_ANON_KEY);
+    }
+
+    async function submitForm(e) {
+      e.preventDefault();
+      
+      const btn = e.target.querySelector('button');
+      const originalText = btn.textContent;
+      const msgDiv = document.getElementById('formMessage');
+      
+      btn.textContent = 'Submitting...';
+      btn.disabled = true;
+      msgDiv.style.display = 'none';
+
+      if (!supabaseClient) {
+        msgDiv.textContent = 'Error: Database connection not found. Please try again later.';
+        msgDiv.style.color = 'var(--orange)';
+        msgDiv.style.display = 'block';
+        btn.textContent = originalText;
+        btn.disabled = false;
+        return;
+      }
+
+      const formData = {
+        name: document.getElementById('name').value,
+        company: document.getElementById('company').value,
+        phone: document.getElementById('phone').value,
+        budget: document.getElementById('budget').value,
+        goal: document.getElementById('goal').value,
+        message: document.getElementById('message').value,
+        source: 'realestate_subdomain_audit'
+      };
+
+      try {
+        const { data, error } = await supabaseClient
+          .from('leads')
+          .insert([formData]);
+
+        if (error) throw error;
+
+        msgDiv.textContent = 'Success! We will contact you shortly.';
+        msgDiv.style.color = 'var(--lime)';
+        msgDiv.style.display = 'block';
+        e.target.reset();
+      } catch (err) {
+        console.error(err);
+        msgDiv.textContent = 'Something went wrong. Please try again or WhatsApp us.';
+        msgDiv.style.color = 'var(--orange)';
+        msgDiv.style.display = 'block';
+      } finally {
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }
+    }
+  </script>
 </body>
 </html>
