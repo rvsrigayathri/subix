@@ -392,52 +392,6 @@ nav a:hover {
   100% { transform: translateX(0); }
 }
 
-/* LeadOS CRM Section */
-.crm-section {
-  background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 100%);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.crm-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-}
-
-.crm-visual {
-  background: var(--surface-raised);
-  border: 1px solid var(--border-bright);
-  border-radius: 16px;
-  padding: 24px;
-  position: relative;
-}
-
-.crm-visual img {
-  width: 100%;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-}
-
-.feature-list {
-  list-style: none;
-  padding: 0;
-  margin: 32px 0 0 0;
-}
-
-.feature-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
-.feature-list i {
-  color: var(--lime);
-  margin-top: 4px;
-}
-
 /* Form Styles */
 .form-group {
   margin-bottom: 24px;
