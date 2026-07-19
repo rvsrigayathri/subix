@@ -87,15 +87,22 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 40px;
+  padding: 12px 24px;
   position: fixed;
-  top: 0;
+  top: 24px;
   left: 0;
   right: 0;
+  margin: 0 auto;
+  width: calc(100% - 48px);
+  max-width: 1000px;
   z-index: 100;
-  background: rgba(6, 6, 6, 0.8);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(15, 15, 15, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 100px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
 }
 
 .hamburger {
@@ -169,15 +176,18 @@ nav a:hover {
 .btn-nav-cta {
   background-color: var(--white);
   color: var(--bg);
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: var(--transition-fast);
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
 .btn-nav-cta:hover {
   background-color: var(--lime);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--lime-glow-strong);
 }
 
 .hero-buttons {
